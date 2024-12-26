@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDS Villavicencio</title>
+    <link rel="shortcut icon" href="alarmj.png" type="image/x-icon">
+    <link rel="stylesheet" href="estiloemp.css">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: #2293f6;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to top, #fffde438, #005AA7);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to top, #fffde440, #005AA7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+            color: #333;
+            line-height: 1.6;
+        }
+        
+
+        /*ENCABESADO*/
+    
+        .titulo{
+            color: #642a73;
+            font-size: 30px;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        header{
+            width: 100% ;
+            height: 740px ;
+
+            background: #F0F2F0;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to left, #6883ff73, #f0f2f06a), url(iotportada.png); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            background: linear-gradient(to left, #6883ff73, #f0f2f08e), url(iotportada.png); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+           
+
+            background-size: cover ;
+            background-attachment:fixed ;
+            position:relative ;
+        }
+        nav{
+            text-align: right;
+            padding: 30px 50px 0 0;
+        }
+        nav >a {
+            color: aliceblue;
+            font-weight: 200;
+            text-decoration: none;
+            margin-right: 40px;
+
+        }
+        nav > a:hover{
+            color: blue;
+            
+        }
+        header .textosencabesado{
+            display:flex ;  
+            height: 400px;
+            width: 95%;
+            align-items: center; 
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+
+
+        }
+        .textosencabesado h1{
+            font-size: 60px;
+            color: beige;
+            text-align: center;
+
+
+        }
+        .textosencabesado h2{
+            font: size 150px; 
+            font-weight: 300;
+            color : beige ; 
+            text-align: center;
+
+        }
+
+        .wave{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            color: white;
+            stroke: none; 
+            fill:#2293f6;
+        }
+
+        /*sections */
+
+
+        .contenedor-sobre-nosotros {
+            display:flex ; 
+            justify-content: space-evenly;
+            text-align: left;
+        }
+        .imagen-sobre-nosotros{
+            width: 65%;
+
+        }
+        .contenedor-textos{
+            width: 48%;
+        }
+        .contenedor-textos h3{
+            margin-bottom: 20px;
+
+        }
+        .contenedor-textos h3 span {
+            background-color: #4d0686;
+            color: white;
+            border-radius: 50%;
+            display: inline-block;
+            text-align: center;
+            width: 30px;
+            height: 30px;
+            padding: 2px;
+            box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+            margin: 5px;
+        }
+        .contenedor-textos p {
+            padding: 0px 0px 30px 15px;
+            font-weight:300 ;
+            text-align:justify ;
+        }
+         .titulo {
+            text-align: center;
+            padding: 0px 0px 40px 15px;
+            width:300 ;
+           
+        }
+
+        /* Sections */
+
+
+        .section {
+            padding: 60px 20px;
+        }
+
+        .section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #642a73;
+        }
+
+        .contenedor {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Socios Section */
+
+
+        .socios .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+         
+        }
+
+        /* Recomendaciones Section  */
+      
+        .recomendacion .serviciocont {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .servicio-ind {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .servicio-ind img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        footer .contenedor {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        footer .contenedorfo {
+            flex: 1 1 100px;
+            margin: 10px;
+        }
+
+        footer h4 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Acerca de</a>
+            <a href="#">Socios</a>
+            <a href="#">Recomendaciones y Servicios</a>
+            <a href="#">Contactos</a>
+        </nav>
+        <div class="textosencabesado">
+            <h1>"Convierte tu casa en algo mejor"</h1>
+            <h2>Con nosotros convertirás tu lugar en algo más seguro por medio del internet</h2>
+        </div>
+        <div class="wave">
+            <div style="height: 150px; overflow: hidden;">
+                <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                  <defs>
+                    <linearGradient id="waveGradient" x1="0%" y1="0%" x2="10%" y2="100%">
+                      <stop offset="0%" style="stop-color: #b7c2f238; stop-opacity: 1;" />
+                      <stop offset="100%" style="stop-color: #1d598dc7; stop-opacity: 1;" />
+                    </linearGradient>
+                  </defs>
+                  <path d="M-0.00,49.85 C203.38,185.52 346.16,-72.33 500.00,49.85 L500.00,149.60 L-0.00,149.60 Z" 
+                        style="stroke: none; fill: url(#waveGradient);"></path>
+                </svg>
+              </div>
+        </div>
+    </header>
+    
+
+
+    <main>
+        <section class="contenedor sobre-nosotros">
+            <h2 class="titulo"> Nuestros productos</h2>
+                <div class="contenedor-sobre-nosotros">
+                    <img src="tresh.svg" alt=""class= "imagen-sobre-nosotros">
+                        <div class="contenedor-textos">
+                            <h3><span>1 </span>Productos de seguridad alta calidad </h3>
+                            <p> Explicacion de los productos y donde se consiguen </p>
+
+                            <h3><span>2 </span>Productos de seguridad alta calidad </h3>
+                            <p> Explicacion de los productos y donde se consiguen </p>
+
+                            <h3><span>4 </span>Productos de seguridad alta calidad </h3>
+                            <p> Explicacion de los productos y donde se consiguen </p>
+
+                            <h3><span>5 </span>Productos de seguridad alta calidad </h3>
+                            <p> Explicacion de los productos y donde se consiguen </p>
+                        </div>
+                </div>
+        </section>
+
+
+
+        <section class="socios section">
+            <div class="contenedor">
+                <h2>Socios de Nuestra Empresa</h2>
+                <div class="cards">
+                    
+
+                    <div class="card">
+                        <img src="hard.png" alt="Harold Steven">
+                        <h3>Ing. Harold Steven Alarcón Hernández</h3>
+                        <p>Ingeniero electrónico especialista en programación y IoT.</p>
+                    </div>
+                    <div class="card">
+                        <img src="diego.png" alt="Diego Chávez">
+                        <h3>Ing. Diego Chávez</h3>
+                        <p>Ingeniero electrónico especialista en programación y IoT.</p>
+                    </div>
+                    <div class="card">
+                        <img src="hard.png" alt="Edixon Alberto">
+                        <h3>Ing. Edixon Alberto</h3>
+                        <p>Ingeniero electrónico especialista en programación y IoT.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="recomendacion section">
+            <div class="contenedor">
+                <h2>Recomendaciones</h2>
+                <div class="serviciocont">
+                    <div class="servicio-ind">
+                        <img src="mascotapir.png" alt="Sensor Proximidad">
+                        <h3>Sensor de Proximidad</h3>
+                        <p>El sensor de proximidad también detectará mascotas u otros animales. Para mayor efectividad, colóquelo en zonas estratégicas donde no haya afectaciones al sensor.</p>
+                    </div>
+                    <div class="servicio-ind">
+                        <img src="cocina.png" alt="Sensor Gas">
+                        <h3>Sensor de Gas</h3>
+                        <p>El sensor de gas detectará usos de esta sustancia. Entre más cerca se encuentre de la cocina, será más eficiente.</p>
+                    </div>
+                    <div class="servicio-ind">
+                        <img src="mantenimiento.png" alt="Mantenimiento">
+                        <h3>Mantenimiento</h3>
+                        <p>Se recomienda hacer mantenimiento cada 6 meses para un buen funcionamiento del sistema.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <section class="vision">
+        <center>
+        <div class="visionn">
+            <h1> vision</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                Aspernatur quod eum nesciunt! Corporis, aliquam. Quae at voluptatem non? Dolor velit cumque
+                 veniam esse quo sequi deserunt eos, libero blanditiis nemo.</p>
+
+        </div>
+        <div class="visionn">
+            <h1> mision</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque eos maiores, velit odit eius quis, 
+                repudiandae aperiam blanditiis dolores aliquid, consectetur quibusdam provident 
+                commodi in qui error deleniti nobis asperiores!</p>
+
+        </div>
+        </center>
+    </section>
+
+
+    <footer>
+        <div class="contenedor">
+            <div class="contenedorfo">
+                <h4>Número</h4>
+                <p>3214314362</p>
+            </div>
+            <div class="contenedorfo">
+                <h4>Email</h4>
+                <p>halarcon86@gmail.com</p>
+            </div>
+            <div class="contenedorfo">
+                <h4>Redes Sociales</h4>
+                <p>blablabla</p>
+            </div>
+            <div class="contenedorfo">
+                <h4>Ubicacion</h4>
+                <p>km9 via catama</p>
+            </div>
+    </footer>
+
+</body>
+</html>
+                
+
