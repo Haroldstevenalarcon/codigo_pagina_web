@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de Nosotros</title>
+    <link rel="shortcut icon" href="alarmj.png" type="image/x-icon">
+    <link rel="stylesheet" href="estiloemp.css">
+    <Style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: #2293f6;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to top, #fffde438, #005AA7);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to top, #fffde440, #005AA7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .titulo{
+            color: #642a73;
+            font-size: 30px;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        header{
+            width: 100% ;
+            height: 740px ;
+
+            background: #f0f2f0;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to left, #0d2073bb, #f0f0f21e), url(imagen1acercade.png); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            /*background: linear-gradient(to left, #13288599, #f0f2f029), url(imagen1acercade.png); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            background: linear-gradient(to right, #13288599, #f0f2f029), url(imagen1acercade.png);
+            background-size: cover ;
+            background-attachment:fixed ;
+            position:relative ;
+        }
+        nav{
+            padding: 30px 50px 50px 0px;
+            text-align: right;
+            width: 100%; 
+        	left: 0; 
+            position:fixed;
+            background-image: none;
+            background-color: #2a2733;
+        }
+        
+        nav >a {
+            color: rgb(227, 233, 239);
+            font-weight: 200;
+            text-decoration: none;
+            margin-right: 40px;
+
+        }
+        nav > a:hover{
+            color: blue;
+            
+        }
+
+        .wave{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            color: white;
+            stroke: none; 
+            fill:#2293f6;
+        }
+
+        header .textosencabesado{
+            display:flex ;  
+            height: 400px;
+            width: 95%;
+            align-items: center; 
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+
+
+        }
+        .textosencabesado h1{
+            font-size: 60px;
+            color: beige;
+            text-align: center;
+
+
+        }
+        .textosencabesado h2{
+            font: size 150px; 
+            font-weight: 300;
+            color : beige ; 
+            text-align: center;
+        }
+    </Style>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="prueba.html">Inicio</a>
+            <a href="acercade.html">Acerca de</a>
+            <a href="#">Socios</a>
+            <a href="#">Recomendaciones y Servicios</a>
+            <a href="#">Contactos</a>
+         
+        </nav>
+        <div class="textosencabesado">
+            <h1>"Convierte tu casa en algo mejor"</h1>
+            <h2>Con nosotros convertirás tu lugar en algo más seguro por medio del internet</h2>
+        </div>
+        <div class="wave">
+            <div style="height: 150px; overflow: hidden;">
+                <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                  <defs>
+                    <linearGradient id="waveGradient" x1="0%" y1="0%" x2="10%" y2="100%">
+                      <stop offset="0%" style="stop-color: #b7c2f238; stop-opacity: 1;" />
+                      <stop offset="100%" style="stop-color: #1d598dc7; stop-opacity: 1;" />
+                    </linearGradient>
+                  </defs>
+                  <path d="M-0.00,49.85 C203.38,185.52 346.16,-72.33 500.00,49.85 L500.00,149.60 L-0.00,149.60 Z" 
+                        style="stroke: none; fill: url(#waveGradient);"></path>
+                </svg>
+              </div>
+        </div>
+
+
+    </header>
+
+
+</body>
+</html>
