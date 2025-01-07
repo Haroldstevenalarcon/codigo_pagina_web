@@ -265,6 +265,49 @@
             margin-bottom: 10px;
             font-size: 1.2rem;
         }
+
+         /* ----------------------BOTONES FLOTANTES-------------------- */
+         .botones-flotantes {
+            position: fixed;
+            top: 40%; /* 20% de la altura de la pantalla desde arriba */
+            left: 96%; /* 10% del ancho de la pantalla desde la izquierda */
+            bottom: 10px;
+            right: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @keyframes giroMoneda {
+        0% {
+            transform: rotateY(0deg);
+        }
+        50% {
+        transform: rotateY(180deg);
+        }
+        100% {
+        transform: rotateY(360deg);
+        }
+        }     
+
+        .botones-flotantes a img {
+            width: 50px; 
+            height: 50px;
+            transition: transform 0.2s ease; 
+            animation: giroMoneda 15s ease-in-out infinite;
+        }
+        .botones-flotantes a img:hover {
+            transform: scale(1.1);
+        }
+
+        .botones-flotantes a img:active, .botones-flotantes a img:not(:hover) {
+            animation-play-state: running; /* Se reanuda la animación cuando el mouse no está sobre la imagen */
+        }
+        
+        .botones-flotantes a img:hover {
+            animation: none; 
+        }
+                             /*--------------- BOTONES FLOTANTES------------ */
+
     </style>
     <script>
 
@@ -300,7 +343,17 @@
         </div>
     </header>
     
-
+  <div class="botones-flotantes">
+        <a href="https://wa.me/+573108701173" class="whatsapp" target="_blank" title="WhatsApp">
+            <img src="whatsapp.png" alt="Instagram">
+        </a>
+        <a href="https://instagram.com/tuusuario" class="instagram" target="_blank" title="Instagram">
+            <img src="instagram.png" alt="Instagram" class="imageninstagram">
+        </a>
+        <a href="https://facebook.com/tuusuario" class="facebook" target="_blank" title="Facebook">
+            <img src="facebook.png" alt="Facebook">
+        </a>
+    </div>
 
     <main>
         <section class="contenedor sobre-nosotros">
