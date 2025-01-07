@@ -159,36 +159,88 @@
             margin: 0 auto;
         }
 
-        /* Socios Section */
+        /* Socios acomodo de las cartas Section */
+        .cuerpo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            flex-wrap: wrap;
 
-
-        .socios .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
         }
-
+        
         .card {
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            text-align: center;
-            padding: 20px;
+            position: relative;
+            width: 300px;
+            height: 350px;
+            margin: 30px;
+            perspective: 1000px;
         }
-
-        .card img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-bottom: 15px;
+        .card .face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.5s;
+        }
+        .card .front {
+            transform: rotateY(0deg);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+        }
+        .card .front img {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
         }
-
-        .card h3 {
-            margin-bottom: 10px;
-         
+        .card .front h2 {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 45px;
+            line-height: 45px;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.6);
+            text-align: center;
         }
+        .card .back {
+            transform: rotateY(180deg);
+            background: rgba(3, 35, 54, 0.9);
+            padding: 15px;
+            color: #f3f3f3;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+        }
+        .card .back h3 {
+            font-size: 24px;
+            margin-top: 20px;
+            letter-spacing: 1px;
+        }
+        .card .back p {
+            letter-spacing: 1px;
+            font-size: 14px;
+        }
+        .card .back .link {
+            border-top: 1px solid #f3f3f3;
+            padding-top: 10px;
+        }
+        .card .back .link a {
+            color: #f3f3f3;
+            text-decoration: none;
+        }
+        .card:hover .front {
+            transform: rotateY(180deg);
+        }
+        .card:hover .back {
+            transform: rotateY(360deg);
+        }
+        /*seccion de socios fin */
+
+      
         /* ubicacion */
         .ubicacionmap{  
                  
@@ -307,6 +359,7 @@
             animation: none; 
         }
                              /*--------------- BOTONES FLOTANTES------------ */
+                           
 
     </style>
     <script>
@@ -321,7 +374,7 @@
             <a href="#socioss">Socios</a>
             <a href="#recomendacionesred">Recomendaciones y Servicios</a>
             <a href="#ubicacionmap">Contactos</a>
-            <a href="#">trabajadores</a>
+            <a href="trabajadores.html">trabajadores</a>
         </nav>
         <div class="textosencabesado">
             <h1>"Convierte tu casa en algo mejor"</h1>
@@ -376,30 +429,47 @@
                 </div>
         </section>
 
+       
+        <section class="cuerpo">
+    
+            <div class="card">
+                <div class="face front">
+                    <img src="diego.png" alt="Diego">
+                    <h2>ingeniero.Diego</h2>
+                </div>
+                <div class="face back">
+                    <h3>Ing. Diego</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, vero?</p>
+                    <div class="link">
+                        <a href="#">Detalles</a>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="face front">
+                    <img src="hard.png" alt="Hardware">
+                    <h2>ingeniero.harold</h2>
+                </div>
+                <div class="face back">
+                    <h3>ing harold</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, vero?</p>
+                    <div class="link">
+                        <a href="#">Detalles</a>
+                    </div>
+                </div>
+            </div>
 
-
-        <section class="socios section">
-            <div id="socioss">
-                <div class="contenedor">
-                    <h2>Socios de Nuestra Empresa</h2>
-                    <div class="cards">
-                    
-
-                        <div class="card">
-                            <img src="hard.png" alt="Harold Steven">
-                            <h3>Ing. Harold Steven Alarcón Hernández</h3>
-                             <p>Ingeniero electrónico especialista en programación y IoT.</p>
-                        </div>
-                        <div class="card">
-                            <img src="diego.png" alt="Diego Chávez">
-                            <h3>Ing. Diego Chávez</h3>
-                            <p>Ingeniero electrónico especialista en programación y IoT.</p>
-                        </div>
-                        <div class="card">
-                            <img src="hard.png" alt="Edixon Alberto">
-                            <h3>Ing. Edixon Alberto</h3>
-                            <p>Ingeniero electrónico especialista en programación y IoT.</p>
-                        </div>
+            <div class="card">
+                <div class="face front">
+                    <img src="hard.png" alt="Hardware">
+                    <h2>ingeniero.harold</h2>
+                </div>
+                <div class="face back">
+                    <h3>ing harold</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, vero?</p>
+                    <div class="link">
+                        <a href="#">Detalles</a>
                     </div>
                 </div>
             </div>
@@ -507,3 +577,4 @@
 </body>
 </html>
          
+
