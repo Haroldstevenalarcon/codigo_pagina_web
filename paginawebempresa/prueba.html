@@ -160,20 +160,45 @@
         }
 
         /* Socios acomodo de las cartas Section */
-        .cuerpo {
+        .cuerpo{
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             min-height: 100vh;
-            flex-wrap: wrap;
 
         }
-        
+        .cuerpo::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Oscurece el fondo */
+            z-index: -1;
+        }
+        .titulo {
+            position :static; /* Posiciona el título en la parte superior */
+            top: 20px; /* Ajusta la distancia desde la parte superior */
+            left: 50%; /* Centra horizontalmente */
+            text-align: center;
+            color:#642a73 ;
+            
+          
+        }
+        .container {
+            display: flex;
+            flex-direction: row; /* Alinea las tarjetas en columnas separadas */
+            justify-content: center;
+            gap: 20px; /* Espaciado entre columnas */
+            z-index: 1;
+            margin-top: 80px; /* Agrega espacio debajo del título */
+        }
         .card {
             position: relative;
             width: 300px;
             height: 350px;
-            margin: 30px;
             perspective: 1000px;
         }
         .card .face {
@@ -377,8 +402,8 @@
             <a href="trabajadores.html">trabajadores</a>
         </nav>
         <div class="textosencabesado">
-            <h1>"Convierte tu casa en algo mejor"</h1>
-            <h2>Con nosotros convertirás tu lugar en algo más seguro por medio del internet</h2>
+            <h1>"Diseño de paginas web "</h1>
+            <h2>Con nosotros convertirás  haras tu pagina web como soñastes  </h2>
         </div>
         <div class="wave">
             <div style="height: 150px; overflow: hidden;">
@@ -410,71 +435,71 @@
 
     <main>
         <section class="contenedor sobre-nosotros">
-            <h2 class="titulo"> Nuestros productos</h2>
+            <h2 class="titulo"> Dudas que surgen </h2>
                 <div class="contenedor-sobre-nosotros">
                     <img src="tresh.svg" alt=""class= "imagen-sobre-nosotros">
                         <div class="contenedor-textos">
-                            <h3><span>1 </span>Productos de seguridad alta calidad </h3>
-                            <p> Explicacion de los productos y donde se consiguen </p>
+                            <h3><span>1 </span> podras realizar tu pagina web con las caracteristicas que desees </h3>
+                            <p> principalmente se hara tu pagina web apartir  de la informacion y caracteristicas que usted como usuario
+                                 desea añadir teniendo encuenta que el costpo inicial de tu pagina web  sera de 1.500.000 pesos colombianos 
 
-                            <h3><span>2 </span>Productos de seguridad alta calidad </h3>
-                            <p> Explicacion de los productos y donde se consiguen </p>
+                                 </p>
 
-                            <h3><span>4 </span>Productos de seguridad alta calidad </h3>
-                            <p> Explicacion de los productos y donde se consiguen </p>
+                            <h3><span>2 </span>cambios realizados  </h3>
+                            <p> se le brinda al usuario hacer tres cambios en cuanto a su informacion o animaciones puestas en su pagina web 
+                                cada cambio tiene un costo de 20.000 pesos colombianos  </p>
 
-                            <h3><span>5 </span>Productos de seguridad alta calidad </h3>
-                            <p> Explicacion de los productos y donde se consiguen </p>
+                            <h3><span>3</span> cuanto vale cada animacion o personidicacion de nuestra pagina  </h3>
+                            <p>  cada animacion  y costos dicionales se negociaran con nuestros clientes  dependiendo de que deseea 
+                                teniendo como base si son paginas  contables o de visualizxacion de productos si deseas encontrar mas
+                                 informacion  lo invitamos a dar click en el iconmo de whatsapp y preguntanos   </p>
+
+                          
                         </div>
                 </div>
         </section>
-
-       
         <section class="cuerpo">
             <div id="socioss">
-    
-            <div class="card">
-                <div class="face front">
-                    <img src="diego.png" alt="Diego">
-                    <h2>ingeniero.Diego</h2>
-                </div>
-                <div class="face back">
-                    <h3>Ing. Diego</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, vero?</p>
-                    <div class="link">
-                        <a href="#">Detalles</a>
+           
+          
+                <h1 class="titulo">Personas a cargo de la creación de tu página web</h1>
+                <div class="container">
+                    <div class="card">
+                        <div class="face front">
+                            <img src="diego.png" alt="Diego">
+                            <h2>Ingeniero Diego</h2>
+                        </div>
+                        <div class="face back">
+                            <h3>Ing. Diego</h3>
+                            <p>Ingeniero electrónico encargado en desarrollo de software</p>
+                            <div class="link">
+                                <a href="https://wa.me/+573108701173" target="_blank">
+                                    <img src="whatsapp.png" alt="WhatsApp">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="face front">
+                            <img src="hard.png" alt="Hardware">
+                            <h2>Ingeniero Harold</h2>
+                        </div>
+                        <div class="face back">
+                            <h3>Ing. Harold</h3>
+                            <p>Ingeniero electrónico encargado en desarrollo de software</p>
+                            <div class="link">
+                                <a href="https://wa.me/+573214314362" target="_blank">
+                                    <img src="whatsapp.png" alt="WhatsApp">
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            </div>
-            <div class="card">
-                <div class="face front">
-                    <img src="hard.png" alt="Hardware">
-                    <h2>ingeniero.harold</h2>
-                </div>
-                <div class="face back">
-                    <h3>ing harold</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, vero?</p>
-                    <div class="link">
-                        <a href="#">Detalles</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="face front">
-                    <img src="hard.png" alt="Hardware">
-                    <h2>ingeniero.harold</h2>
-                </div>
-                <div class="face back">
-                    <h3>ing harold</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, vero?</p>
-                    <div class="link">
-                        <a href="#">Detalles</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
+        </div>
+         </section>
+          
+      
 
 
         <section class="recomendacion section">
@@ -578,4 +603,3 @@
 </body>
 </html>
          
-
