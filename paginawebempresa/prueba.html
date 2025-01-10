@@ -197,8 +197,8 @@
         }
         .card {
             position: relative;
-            width: 300px;
-            height: 350px;
+            width: 400px;
+            height: 400px;
             perspective: 1000px;
         }
         .card .face {
@@ -296,16 +296,20 @@
         }
 
         .servicio-ind {
-            background: #fff;
+            background: #c2e59c;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to bottom, #64b3f4, #c2e59c);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to bottom, #64b3f4, #c2e59c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            width: auto;
+            height: auto;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 100px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
             text-align: center;
         }
-
+         /*  para las imagenes si colocamos en  esta secciondentro de la carta */
         .servicio-ind img {
             max-width: 100%;
-            height: auto;
+            height: 1500px;
             margin-bottom: 15px;
         }
 
@@ -508,17 +512,17 @@
                     <h2>Recomendaciones</h2>
                     <div class="serviciocont">
                         <div class="servicio-ind">
-                            <img src="mascotapir.png" alt="Sensor Proximidad">
+                            
                             <h3>Sensor de Proximidad</h3>
                             <p>El sensor de proximidad también detectará mascotas u otros animales. Para mayor efectividad, colóquelo en zonas estratégicas donde no haya afectaciones al sensor.</p>
                         </div>
                         <div class="servicio-ind">
-                            <img src="cocina.png" alt="Sensor Gas">
+                           
                             <h3>Sensor de Gas</h3>
                             <p>El sensor de gas detectará usos de esta sustancia. Entre más cerca se encuentre de la cocina, será más eficiente.</p>
                         </div>
                         <div class="servicio-ind">
-                            <img src="mantenimiento.png" alt="Mantenimiento">
+                           
                             <h3>Mantenimiento</h3>
                             <p>Se recomienda hacer mantenimiento cada 6 meses para un buen funcionamiento del sistema.</p>
                         </div>
@@ -602,4 +606,3 @@
 
 </body>
 </html>
-         
