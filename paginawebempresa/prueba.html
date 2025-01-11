@@ -21,7 +21,7 @@
             background: -webkit-linear-gradient(to top, #fffde438, #005AA7);  /* Chrome 10-25, Safari 5.1-6 */
             background: linear-gradient(to top, #fffde440, #005AA7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-
+            
             color: #333;
             line-height: 1.6;
         }
@@ -99,15 +99,29 @@
         }
 
         /*sections */
+     
+        .contenedor--sobre-nosotros{
 
+            background: #F0F2F0;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to left, #6883ff73, #f0f2f06a), url(iotportada.png); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            background: linear-gradient(to left, #6883ff73, #f0f2f08e), url(iotportada.png); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+           
+
+            background-size: cover ;
+            background-attachment:fixed ;
+            position:relative ;
+        }
 
         .contenedor-sobre-nosotros {
             display:flex ; 
             justify-content: space-evenly;
             text-align: left;
+
+
+        
         }
         .imagen-sobre-nosotros{
-            width: 65%;
+            width: 35%;
 
         }
         .contenedor-textos{
@@ -166,6 +180,8 @@
             align-items: center;
             justify-content: flex-start;
             min-height: 100vh;
+            margin-top: 2%;
+           
 
         }
         .cuerpo::before {
@@ -200,6 +216,7 @@
             width: 400px;
             height: 400px;
             perspective: 1000px;
+          
         }
         .card .face {
             position: absolute;
@@ -267,18 +284,19 @@
 
       
         /* ubicacion */
-        .ubicacionmap{  
-                 
-            width: 100% ;
-            min-height: auto;
-            
+        .ubicacionmap{ 
+               
             background: #F0F2F0;  /* fallback for old browsers */
             background: -webkit-linear-gradient(to left, #6883ff73, #f0f2f06a), url(iotportada.png); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
             background: linear-gradient(to left, #6883ff73, #f0f2f08e), url(iotportada.png); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
            
             background-size: cover ;
             background-attachment:fixed ;
-            position:relative ;
+            position:relative ; 
+                 
+            width: 100% ;
+            min-height: auto;
+         
     
         }
         /*redes */
@@ -320,6 +338,7 @@
             text-align: center;
             background-position: center;
             background-size: cover;
+            position:relative ;
 
             left: 0;
             top: 0;
@@ -438,7 +457,7 @@
     </div>
 
     <main>
-        <section class="contenedor sobre-nosotros">
+        <section class="contenedor--sobre-nosotros">
             <h2 class="titulo"> Dudas que surgen </h2>
                 <div class="contenedor-sobre-nosotros">
                     <img src="tresh.svg" alt=""class= "imagen-sobre-nosotros">
@@ -464,8 +483,6 @@
         </section>
         <section class="cuerpo">
             <div id="socioss">
-           
-          
                 <h1 class="titulo">Personas a cargo de la creación de tu página web</h1>
                 <div class="container">
                     <div class="card">
@@ -474,7 +491,7 @@
                             <h2>Ingeniero Diego</h2>
                         </div>
                         <div class="face back">
-                            <h3>Ing. Diego</h3>
+                            <h3>Ing. Diego chavez</h3>
                             <p>Ingeniero electrónico encargado en desarrollo de software</p>
                             <div class="link">
                                 <a href="https://wa.me/+573108701173" target="_blank">
@@ -489,7 +506,7 @@
                             <h2>Ingeniero Harold</h2>
                         </div>
                         <div class="face back">
-                            <h3>Ing. Harold</h3>
+                            <h3>Ing. Harold alarcon</h3>
                             <p>Ingeniero electrónico encargado en desarrollo de software</p>
                             <div class="link">
                                 <a href="https://wa.me/+573214314362" target="_blank">
@@ -563,9 +580,6 @@
         </div>
     </section>
 
-
-
-
     <footer>
         <div class="contenedor">
             <div class="contenedorfo">
@@ -592,11 +606,11 @@
                      </div>
                 </div>
                 <div class="gmail">
-                    <a href="https://www.gmail.com/"><img src="Gmail.png" alt="Facebook" style="width:40px; margin: 5px;" ></a>
+                    <a href="//mail.google.com/mail/u/0/?pli=1#search/halarcon86%40uan.edu.co"><img src="Gmail.png" alt="Facebook" style="width:40px; margin: 5px;" ></a>
                 </div>
             
                 <div class="faceboo">
-                    <a href="https://www.facebook.com/"><img src="facebook.png" alt="Facebook" style="width:40px; margin: 5px;"></a>
+                    <a href="https://www.facebook.com/tuusuario"><img src="facebook.png" alt="Facebook" style="width:40px; margin: 5px;"></a>
                 </div>
                 
             </div>
@@ -606,3 +620,5 @@
 
 </body>
 </html>
+         
+
