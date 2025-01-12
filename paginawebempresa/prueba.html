@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="estiloemp.css">
     <style>
         /* Global Styles */
-        * {
+        *{
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -57,11 +57,9 @@
             font-weight: 200;
             text-decoration: none;
             margin-right: 40px;
-
         }
         nav > a:hover{
-            color: blue;
-            
+            color: blue;   
         }
         header .textosencabesado{
             display:flex ;  
@@ -71,15 +69,11 @@
             justify-content: center;
             flex-direction: column;
             text-align: center;
-
-
         }
         .textosencabesado h1{
             font-size: 60px;
             color: beige;
             text-align: center;
-
-
         }
         .textosencabesado h2{
             font: size 150px; 
@@ -88,7 +82,6 @@
             text-align: center;
 
         }
-
         .wave{
             position: absolute;
             bottom: 0;
@@ -99,26 +92,27 @@
         }
 
         /*sections */
-     
         .contenedor--sobre-nosotros{
 
-            background: #F0F2F0;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to left, #6883ff73, #f0f2f06a), url(iotportada.png); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-            background: linear-gradient(to left, #6883ff73, #f0f2f08e), url(iotportada.png); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            width: 100% ;
+            height: 900px ;
+            background-image: url(ondafo.gif);
            
-
-            background-size: cover ;
-            background-attachment:fixed ;
+            padding: 10px 0;
+            text-align: center;
+            background-position:center;
+            background-size: cover;
             position:relative ;
-        }
 
+             z-index: 0;
+           
+           
+           
+        }
         .contenedor-sobre-nosotros {
             display:flex ; 
             justify-content: space-evenly;
             text-align: left;
-
-
-        
         }
         .imagen-sobre-nosotros{
             width: 35%;
@@ -154,10 +148,7 @@
             width:300 ;
            
         }
-
         /* Sections */
-
-
         .section {
             padding: 60px 20px;
         }
@@ -174,6 +165,7 @@
         }
 
         /* Socios acomodo de las cartas Section */
+       
         .cuerpo{
             display: flex;
             flex-direction: column;
@@ -181,8 +173,9 @@
             justify-content: flex-start;
             min-height: 100vh;
             margin-top: 2%;
-           
 
+
+            
         }
         .cuerpo::before {
             content: '';
@@ -199,9 +192,7 @@
             top: 20px; /* Ajusta la distancia desde la parte superior */
             left: 50%; /* Centra horizontalmente */
             text-align: center;
-            color:#642a73 ;
-            
-          
+            color:#642a73 ; 
         }
         .container {
             display: flex;
@@ -215,8 +206,7 @@
             position: relative;
             width: 400px;
             height: 400px;
-            perspective: 1000px;
-          
+            perspective: 1000px; 
         }
         .card .face {
             position: absolute;
@@ -281,8 +271,6 @@
             transform: rotateY(360deg);
         }
         /*seccion de socios fin */
-
-      
         /* ubicacion */
         .ubicacionmap{ 
                
@@ -293,24 +281,23 @@
             background-size: cover ;
             background-attachment:fixed ;
             position:relative ; 
+          
                  
             width: 100% ;
             min-height: auto;
-         
-    
         }
         /*redes */
        img.bb{
         background-color: #333;
+
        }
-
-
         /* Recomendaciones Section  */
       
         .recomendacion .serviciocont {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
+
         }
 
         .servicio-ind {
@@ -330,7 +317,6 @@
             height: 1500px;
             margin-bottom: 15px;
         }
-
         footer {
             background-image: url(fondoofo.gif);
             color: black;
@@ -339,6 +325,11 @@
             background-position: center;
             background-size: cover;
             position:relative ;
+
+
+
+
+            
 
             left: 0;
             top: 0;
@@ -349,34 +340,32 @@
             opacity: 10;
             
         }
-
         footer .contenedor {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
         }
-
         footer .contenedorfo {
             flex: 1 1 100px;
             margin: 10px;
         }
-
         footer h4 {
             margin-bottom: 10px;
             font-size: 1.2rem;
         }
-
          /* ----------------------BOTONES FLOTANTES-------------------- */
          .botones-flotantes {
-            position: fixed;
-            top: 40%; /* 20% de la altura de la pantalla desde arriba */
-            left: 96%; /* 10% del ancho de la pantalla desde la izquierda */
+           
             bottom: 10px;
-            right: 10px;
+            position: fixed;
+            top: 50%;
+            left: auto;
+            right: 20px;
             display: flex;
             flex-direction: column;
+            gap: 10px;
+            z-index: 100;
         }
-
         @keyframes giroMoneda {
         0% {
             transform: rotateY(0deg);
@@ -394,6 +383,8 @@
             height: 50px;
             transition: transform 0.2s ease; 
             animation: giroMoneda 15s ease-in-out infinite;
+
+         
         }
         .botones-flotantes a img:hover {
             transform: scale(1.1);
@@ -407,11 +398,8 @@
             animation: none; 
         }
                              /*--------------- BOTONES FLOTANTES------------ */
-                           
-
     </style>
     <script>
-
     </script>
 </head>
 <body>
@@ -443,7 +431,6 @@
               </div>
         </div>
     </header>
-    
   <div class="botones-flotantes">
         <a href="https://wa.me/+573108701173" class="whatsapp" target="_blank" title="WhatsApp">
             <img src="whatsapp.png" alt="Instagram">
@@ -455,7 +442,6 @@
             <img src="facebook.png" alt="Facebook">
         </a>
     </div>
-
     <main>
         <section class="contenedor--sobre-nosotros">
             <h2 class="titulo"> Dudas que surgen </h2>
@@ -475,13 +461,12 @@
                             <h3><span>3</span> cuanto vale cada animacion o personidicacion de nuestra pagina  </h3>
                             <p>  cada animacion  y costos dicionales se negociaran con nuestros clientes  dependiendo de que deseea 
                                 teniendo como base si son paginas  contables o de visualizxacion de productos si deseas encontrar mas
-                                 informacion  lo invitamos a dar click en el iconmo de whatsapp y preguntanos   </p>
-
-                          
+                                 informacion  lo invitamos a dar click en el iconmo de whatsapp y preguntanos   </p>       
                         </div>
                 </div>
         </section>
-        <section class="cuerpo">
+    <section class="cuerpofondo">
+        <div class="cuerpo">
             <div id="socioss">
                 <h1 class="titulo">Personas a cargo de la creación de tu página web</h1>
                 <div class="container">
@@ -516,13 +501,10 @@
                         </div>
                     </div>
                 </div>
-        
         </div>
+    </div>
+</section>
          </section>
-          
-      
-
-
         <section class="recomendacion section">
             <div id="recomendacionesred">
                 <div class="contenedor">
@@ -555,14 +537,12 @@
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                 Aspernatur quod eum nesciunt! Corporis, aliquam. Quae at voluptatem non? Dolor velit cumque
                  veniam esse quo sequi deserunt eos, libero blanditiis nemo.</p>
-
         </div>
         <div class="visionn">
             <h1> mision</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque eos maiores, velit odit eius quis, 
                 repudiandae aperiam blanditiis dolores aliquid, consectetur quibusdam provident 
                 commodi in qui error deleniti nobis asperiores!</p>
-
         </div>
         </center>
     </section>
@@ -579,7 +559,6 @@
              </center>
         </div>
     </section>
-
     <footer>
         <div class="contenedor">
             <div class="contenedorfo">
@@ -591,8 +570,6 @@
                 <h4>Ubicacion</h4>
                 <p>km9 via catama</p>
             </div>
-
-
             <div class="contenedorfo">
                 <h4>gmail</h4>
                 <p>halarcon86@gmail.com</p>
@@ -612,13 +589,9 @@
                 <div class="faceboo">
                     <a href="https://www.facebook.com/tuusuario"><img src="facebook.png" alt="Facebook" style="width:40px; margin: 5px;"></a>
                 </div>
-                
             </div>
         </div>
-        
     </footer>
-
 </body>
 </html>
          
-
